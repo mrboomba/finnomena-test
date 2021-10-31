@@ -46,10 +46,10 @@ watch: {
 
 ## How would you track down a performance issue in production? Have you ever had to do this?
 
-I need to implement web application that user need to see data and information in 2 sec but I need to called api that use time around 3-4 sec to get data. So we use cache then network to store previous response in to IndexDB by using URL and body as a key.Then next time when we called api it will find ount in IndexDB first then show the old data with some app shell and then get data from backend in the background and when response is coming we check it that different from old data or not.If yes, we store data in to IndexDB and Update data on frontend.Else we just ignore it.
+I need to implement a web application that users need to see data and information in 2 seconds, but I need to call an API that uses 3-4 seconds to get data. As a result, we use cache and network to store previous responses in IndexDB, with URL and body as keys.Then, the next time we call the API, it will first check to see if there is data in IndexDB, then display the old data with some app shell, and then get data from the backend in the background. When the response arrives, we will check to see if it differs from the old data.If yes, we store data in IndexDB and update data on the frontend. Otherwise, we just ignore it.
 
 ## How would you improve the FINNOMENA APIs that you just used?
 
 1. Add a swagger for understanding the business value and reduce error from unknown area
-2. Maybe add some authentication if these information have a value
+2. Maybe add some authentication by using JWT token if these information have a value
 3. Add rate limit for prevent DoS and DDoS

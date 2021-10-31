@@ -15,9 +15,7 @@ app.use(express.json());
 app.use(express.static(staticPath));
 app.use(cors(options));
 
-app.get('/', function (req,res) {
-    console.log(path);
-    
+app.get('/', function (req,res) {    
     res.sendFile(path.join(staticPath , "index.html"));
   });
 
