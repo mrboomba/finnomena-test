@@ -4,13 +4,16 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "build": "vue-cli-service build --dest ../finnomena-bfe/views",
     "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "@types/axios-mock-adapter": "^1.10.0",
     "axios": "^0.24.0",
+    "axios-mock-adapter": "^1.20.0",
     "core-js": "^3.6.5",
+    "date-fns": "^2.25.0",
     "vue": "^2.6.11",
     "vue-class-component": "^7.2.3",
     "vue-property-decorator": "^9.1.2",

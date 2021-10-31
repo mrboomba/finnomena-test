@@ -4,13 +4,21 @@ import { FundRankingResponse } from './type/fund-ranking.model';
 import cors from 'cors';
 const app: Application = express();
 const allowedOrigins = ['http://localhost:8080'];
+const path = __dirname + '\\views\\';
 
 const options: cors.CorsOptions = {
   origin: allowedOrigins
 };
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.use(express.static(path));
 app.use(cors(options));
+
+app.get('/', function (req,res) {
+    console.log(path);
+    
+    res.sendFile(path + "index.html");
+  });
 
 app.get('/data', async (req: Request, res: Response) => {
     if (req?.query?.range) {

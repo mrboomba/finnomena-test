@@ -1,0 +1,25 @@
+{
+  "name": "finnomena-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "yarn build:app && yarn start:server",
+    "start:dev" :  "concurrently \"cd finnomena-fe && yarn && yarn serve\" \"yarn start:server\"  ",
+    "build:app": "cd finnomena-fe && yarn && yarn build",
+    "start:server": "cd finnomena-bfe && yarn && yarn start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mrboomba/finnomena-test.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mrboomba/finnomena-test/issues"
+  },
+  "homepage": "https://github.com/mrboomba/finnomena-test#readme",
+  "dependencies": {
+    "concurrently": "^6.3.0"
+  }
+}

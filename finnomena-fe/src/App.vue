@@ -21,18 +21,13 @@
 
 <script lang="ts">
 import Vue from "vue";
-import FundRanking from "./components/fundRanking.vue";
+import FundRanking from "./components/FundRanking.vue";
 
 export default Vue.extend({
   name: "App",
-
   components: {
     FundRanking,
   },
-
-  data: () => ({
-    //
-  }),
 });
 </script>
 <style>

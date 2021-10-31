@@ -6,5 +6,4 @@ export interface FundRanking {
     nav_return: number;
     thailand_fund_code: string;
     rank?: number;
-    displayDate: string;
 }
